@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Form</title>
+    <script src="/valdation.js" defer></script>
+
+</head>
+<body>
+<h2>Employee Form</h2>
+<form th:action="@{/submitForm}" th:object="${employee}" method="post">
+    <label for="id">ID:</label>
+    <input type="text" id="id" th:field="*{id}" /><br/><br/>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" th:field="*{name}" /><br/><br/>
+
+    <label for="position">Position:</label>
+    <input type="text" id="position" th:field="*{position}" /><br/><br/>
+
+    <label for="salary">Salary:</label>
+    <input type="text" id="salary" th:field="*{salary}" /><br/><br/>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
